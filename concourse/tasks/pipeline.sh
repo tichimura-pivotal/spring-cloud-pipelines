@@ -20,5 +20,6 @@ export MAVEN_ARGS="-Dmaven.repo.local=${M2_LOCAL}"
 
 echo "Sourcing file with pipeline functions"
 source ${SCRIPTS_OUTPUT_FOLDER}/pipeline.sh
+echo "Sourcing file with pipeline functions1"
 
 cd ${ROOT_FOLDER}
