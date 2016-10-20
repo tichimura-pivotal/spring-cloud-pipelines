@@ -9,10 +9,12 @@ mkdir ${SCRIPTS_OUTPUT_FOLDER}
 cp ${ROOT_FOLDER}/${TOOLS_RESOURCE}/common/src/main/bash/* ${SCRIPTS_OUTPUT_FOLDER}/
 
 echo "Retrieving version"
+export PIPELINE_VERSION2=`ls ${SCRIPTS_OUTPUT_FOLDER}/${VERSION_RESOURCE}` 
 cp ${ROOT_FOLDER}/${VERSION_RESOURCE}/version ${SCRIPTS_OUTPUT_FOLDER}/
 #export PIPELINE_VERSION=$( cat ${SCRIPTS_OUTPUT_FOLDER}/${VERSION_RESOURCE} )
 export PIPELINE_VERSION=`cat ${SCRIPTS_OUTPUT_FOLDER}/${VERSION_RESOURCE}` 
 echo "Retrieved version is [${PIPELINE_VERSION}]"
+echo "Retrieved version is [${PIPELINE_VERSION2}]"
 
 M2_LOCAL=${ROOT_FOLDER}/${M2_REPO}
 echo "Changing the maven local to [${M2_LOCAL}]"
